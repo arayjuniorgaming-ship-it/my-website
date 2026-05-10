@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="images/favicon.ico"/>
+    <title>burung biru gak jelas buatan orang ganteng</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <div id="graphics-select" style="text-align:center; margin: 32px 0 16px 0;">
+      <label style="font-size:1.2rem; font-weight:bold; margin-right:12px;">Pilih Grafik: </label>
+      <button class="graphics-btn" onclick="setGraphics('smooth')">Smooth</button>
+      <button class="graphics-btn" onclick="setGraphics('standard')">Standar</button>
+      <button class="graphics-btn" onclick="setGraphics('high')">High</button>
+      <button class="graphics-btn" onclick="setGraphics('ultra')">Ultra</button>
+    </div>
+    <div class="background"></div>
+    <img src="images/Bird.png" alt="bird-img" class="bird" id="bird-1">
+    <div class="message">
+         <p>press keyboard <span style="color: red;">&uarr;</span> for start the gameg</p>
+    </div>
+    <div class="score">
+        <span class="score_title"></span>
+        <span class="score_val"></span>
+        <span class="level-inline">Level: <span id="level_val">1</span></span>
+        <span class="highscore-inline">High Score: <span id="highscore_val">0</span></span>
+    </div>
+    <!-- Tombol gear pengaturan -->
+    <button id="open-settings" class="settings-gear" title="Pengaturan">&#9881;</button>
+
+    <!-- Modal pengaturan -->
+    <div id="settings-modal" class="settings-modal">
+      <div class="settings-modal-content">
+        <span class="close-settings" id="close-settings">&times;</span>
+        <h2>Pengaturan</h2>
+        <div class="settings-group">
+          <label>Grafik:</label>
+          <button class="graphics-btn" onclick="setGraphics('smooth')">Smooth</button>
+          <button class="graphics-btn" onclick="setGraphics('standard')">Standar</button>
+          <button class="graphics-btn" onclick="setGraphics('high')">High</button>
+          <button class="graphics-btn" onclick="setGraphics('ultra')">Ultra</button>
+        </div>
+        <div class="settings-group">
+          <label>Audio:</label>
+          <button class="settings-btn" onclick="toggleAudio()">Audio: <span id="audio-status">On</span></button>
+        </div>
+        <div class="settings-group">
+          <button class="settings-btn" onclick="resetHighScore()">Reset High Score</button>
+        </div>
+      </div>
+    </div>
+</body>
+</html>
